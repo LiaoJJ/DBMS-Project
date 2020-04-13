@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>trend-form</title>
+</head>
+<head th:replace="layouts::header"></head>
+<body>
+<nav th:replace="layouts:: navbar"></nav>
+
+<div th:fragment="trend1-description" class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Trend of Price</h1>
+            <p class="lead">The change of the price of a selected model with a selected manufacturer, selected status including cleanliness,transmission,fuel type and others within a selected time frame.  </p>
+        </div>
+    </div>
+</div>
+
+<form th:action="@{/trend1/show}" method="post" th:object="${form}">
+    <nav th:replace="layouts:: form"></nav>
+</form>
+
+
+</body>
+</html>

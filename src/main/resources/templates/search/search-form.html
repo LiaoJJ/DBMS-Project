@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>search-form</title>
+</head>
+<head th:replace="layouts::header"></head>
+<body>
+
+<nav th:replace="layouts:: navbar"></nav>
+
+
+<form th:action="@{/search/show}" method="post" th:object="${form}">
+    <nav th:replace="layouts:: form"></nav>
+</form>
+
+</body>
+</html>

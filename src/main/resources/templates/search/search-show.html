@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>search-show</title>
+</head>
+<head th:replace="layouts::header"></head>
+<body>
+<nav th:replace="layouts:: navbar"></nav>
+
+
+<div class="container">
+    <a class="btn btn-primary" th:href="@{/search/form}" role="button">Back</a>
+    <table th:fragment="list-employees" class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">listingUrl</th>
+            <th scope="col">Price</th>
+            <th scope="col">Year</th>
+            <th scope="col">Manufacturer</th>
+            <th scope="col">Model</th>
+            <th scope="col">Condition</th>
+            <th scope="col">Number of Cylinders</th>
+            <th scope="col">fuel type</th>
+            <th scope="col">Mileage</th>
+            <th scope="col">title status</th>
+            <th scope="col">transmission type</th>
+            <th scope="col">VIN</th>
+            <th scope="col">type of drive</th>
+            <th scope="col">size</th>
+            <th scope="col">color</th>
+            <th scope="col">image url</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="data: ${datas}">
+            <td th:text="${data.listingUrl}" ></td>
+            <td th:text="${data.price}"></td>
+            <td th:text="${data.year}"></td>
+            <td th:text="${data.manufacturer}"></td>
+            <td th:text="${data.model}"></td>
+            <td th:text="${data.condition}"></td>
+            <td th:text="${data.numOfCylinders}"></td>
+            <td th:text="${data.fuelType}"></td>
+            <td th:text="${data.mileage}"></td>
+            <td th:text="${data.titleStatus}"></td>
+            <td th:text="${data.transmissionType}"></td>
+            <td th:text="${data.VIN}"></td>
+            <td th:text="${data.typeOfDrive}"></td>
+            <td th:text="${data.size}"></td>
+            <td th:text="${data.color}"></td>
+            <td th:text="${data.imageUrl}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>

@@ -8,16 +8,16 @@
 <body>
 <nav th:replace="layouts:: navbar"></nav>
 
-<div th:fragment="trend1-description" class="container">
+<div th:fragment="trend4-description" class="container">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Trend of Price</h1>
-            <p class="lead">The change of the price of a selected model with a selected manufacturer, selected status including cleanliness,transmission,fuel type and others within a selected time frame and the change of the number of each type of vehicle transmission happens in that year  with selected model, selected manufacturer and selected status including cleanliness,transmission,fuel type and others in a given time frame.</p>
+            <h1 class="display-4">Trend of Vehicle Status</h1>
+            <p class="lead">The change of the number of each selected vehicle status happens in that year with selected model, selected manufacturer and selected status including cleanliness,transmission, fuel type and others in a given time frame.</p>
         </div>
     </div>
 </div>
 
-<form th:action="@{/trend1/show}" method="post">
+<form th:action="@{/trend4/show}" method="post">
     <div th:fragment="form" class="container justify-content-md-center col-8">
         <input class="btn btn-primary" type="submit" value="Show">
         <div class="form-row">

@@ -8,16 +8,17 @@
 <body>
 <nav th:replace="layouts:: navbar"></nav>
 
-<div th:fragment="trend1-description" class="container">
+<div th:fragment="trend6-description" class="container">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Trend of Price</h1>
-            <p class="lead">The change of the price of a selected model with a selected manufacturer, selected status including cleanliness,transmission,fuel type and others within a selected time frame and the change of the number of each type of vehicle transmission happens in that year  with selected model, selected manufacturer and selected status including cleanliness,transmission,fuel type and others in a given time frame.</p>
+            <h1 class="display-4">Trend of Number in a Location</h1>
+            <p class="lead">The trend of total number of used cars from different location in a range of years(as parameter). This trend can show us the change of popularity of cars in different locations.
+            </p>
         </div>
     </div>
 </div>
 
-<form th:action="@{/trend1/show}" method="post">
+<form th:action="@{/trend6/show}" method="post">
     <div th:fragment="form" class="container justify-content-md-center col-8">
         <input class="btn btn-primary" type="submit" value="Show">
         <div class="form-row">
@@ -48,6 +49,16 @@
             <div class="form-group col-md-6">
                 <label>fuelType</label>
                 <input class="form-control" type="text" name="maxMileage" th:field="${form.fuelType}">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>state</label>
+                <input class="form-control" type="text" name="maxPrice" th:field="${form.state}">
+            </div>
+            <div class="form-group col-md-6">
+                <label>region</label>
+                <input class="form-control" type="text" name="maxMileage" th:field="${form.region}">
             </div>
         </div>
     </div>

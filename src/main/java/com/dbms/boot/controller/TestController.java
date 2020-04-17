@@ -2,7 +2,7 @@ package com.dbms.boot.controller;
 
 import com.dbms.boot.entities.Data;
 import com.dbms.boot.entities.Form;
-import com.dbms.boot.entities.trend1;
+import com.dbms.boot.entities.Trend7;
 import com.dbms.boot.service.TestService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -53,8 +53,7 @@ public class TestController {
         return "search/search-show";
     }
 
-
-
+    // 1
     @GetMapping("/trend1/form")
     public String trend1_form(Model model){
         model.addAttribute("form", new Form());
@@ -63,19 +62,136 @@ public class TestController {
 
     @GetMapping("/trend1/show")
     public String trend1_show(Model model) throws JsonProcessingException {
-        trend1 t1 = new trend1(2010, 11111);
-        trend1 t2 = new trend1(2011, 22222);
-        trend1 t3 = new trend1(2012, 11111);
-        trend1 t4 = new trend1(2014, 33333);
-        trend1 t5 = new trend1(2016, 11111);
-        trend1 t6 = new trend1(2017, 33333);
-        trend1 t7 = new trend1(2018, 44444);
-        trend1 t8 = new trend1(2019, 55555);
-        List<trend1> trend1s = Arrays.asList(t1, t2, t3, t4, t5, t6, t7, t8);
+        Trend7 t1 = new Trend7(2010, 11111, "Price", 2123, "numOf");
+        Trend7 t2 = new Trend7(2011, 22222, "Price", 3333, "numOf");
+        Trend7 t3 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        Trend7 t4 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        List<Trend7> trend1s = Arrays.asList(t1, t2, t3, t4);
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonString = objectMapper.writeValueAsString(trend1s);
         model.addAttribute("jsonString", jsonString);
         return "trend/trend1-show";
+    }
+
+    // 2
+    @GetMapping("/trend2/form")
+    public String trend2_form(Model model){
+        model.addAttribute("form", new Form());
+        return "trend/trend2-form";
+    }
+
+    @GetMapping("/trend2/show")
+    public String trend2_show(Model model) throws JsonProcessingException {
+        Trend7 t1 = new Trend7(2010, 11111, "Price", 2123, "numOf");
+        Trend7 t2 = new Trend7(2011, 22222, "Price", 3333, "numOf");
+        Trend7 t3 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        Trend7 t4 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        List<Trend7> trend1s = Arrays.asList(t1, t2, t3, t4);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(trend1s);
+        model.addAttribute("jsonString", jsonString);
+        return "trend/trend2-show";
+    }
+
+    //3
+    @GetMapping("/trend3/form")
+    public String trend3_form(Model model){
+        model.addAttribute("form", new Form());
+        return "trend/trend3-form";
+    }
+
+    @GetMapping("/trend3/show")
+    public String trend3_show(Model model) throws JsonProcessingException {
+        Trend7 t1 = new Trend7(2010, 11111, "Price", 2123, "numOf");
+        Trend7 t2 = new Trend7(2011, 22222, "Price", 3333, "numOf");
+        Trend7 t3 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        Trend7 t4 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        List<Trend7> trend1s = Arrays.asList(t1, t2, t3, t4);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(trend1s);
+        model.addAttribute("jsonString", jsonString);
+        return "trend/trend3-show";
+    }
+
+    // 2
+    @GetMapping("/trend4/form")
+    public String trend4_form(Model model){
+        model.addAttribute("form", new Form());
+        return "trend/trend4-form";
+    }
+
+    @GetMapping("/trend4/show")
+    public String trend4_show(Model model) throws JsonProcessingException {
+        Trend7 t1 = new Trend7(2010, 11111, "Price", 2123, "numOf");
+        Trend7 t2 = new Trend7(2011, 22222, "Price", 3333, "numOf");
+        Trend7 t3 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        Trend7 t4 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        List<Trend7> trend1s = Arrays.asList(t1, t2, t3, t4);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(trend1s);
+        model.addAttribute("jsonString", jsonString);
+        return "trend/trend4-show";
+    }
+
+    // 5
+    @GetMapping("/trend5/form")
+    public String trend5_form(Model model){
+        model.addAttribute("form", new Form());
+        return "trend/trend5-form";
+    }
+
+    @GetMapping("/trend5/show")
+    public String trend5_show(Model model) throws JsonProcessingException {
+        Trend7 t1 = new Trend7(2010, 11111, "Price", 2123, "numOf");
+        Trend7 t2 = new Trend7(2011, 22222, "Price", 3333, "numOf");
+        Trend7 t3 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        Trend7 t4 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        List<Trend7> trend1s = Arrays.asList(t1, t2, t3, t4);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(trend1s);
+        model.addAttribute("jsonString", jsonString);
+        return "trend/trend5-show";
+    }
+
+    // 6
+    @GetMapping("/trend6/form")
+    public String trend6_form(Model model){
+        model.addAttribute("form", new Form());
+        return "trend/trend6-form";
+    }
+
+    @GetMapping("/trend6/show")
+    public String trend6_show(Model model) throws JsonProcessingException {
+        Trend7 t1 = new Trend7(2010, 11111, "Price", 2123, "numOf");
+        Trend7 t2 = new Trend7(2011, 22222, "Price", 3333, "numOf");
+        Trend7 t3 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        Trend7 t4 = new Trend7(2012, 11111, "Price", 1232, "numOf");
+        List<Trend7> trend1s = Arrays.asList(t1, t2, t3, t4);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(trend1s);
+        model.addAttribute("jsonString", jsonString);
+        return "trend/trend6-show";
+    }
+
+    // 7
+    @GetMapping("/trend7/form")
+    public String trend7_form(Model model){
+        model.addAttribute("form", new Form());
+        return "trend/trend7-form";
+    }
+
+    @GetMapping("/trend7/show")
+    public String trend7_show(Model model) throws JsonProcessingException {
+        Trend7 t1 = new Trend7(2010, 11111, "Bencz", 2123, "Audi", 3333, "Tesla");
+        Trend7 t2 = new Trend7(2011, 2222, "Audi", 3333, "Bencz", 4444, "Audi");
+        Trend7 t3 = new Trend7(2012, 11111, "Audi", 1232, "Bencz", 12312, "Tesla");
+        Trend7 t4 = new Trend7(2012, 11111, "Tesla", 1232, "Tesla", 12312, "Bencz");
+        Trend7 t5 = new Trend7(2013, 1111, "Honda", 122, "Toyota", 1312, "Tesla");
+        List<Trend7> trend1s = Arrays.asList(t1, t2, t3, t4, t5);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(trend1s);
+        model.addAttribute("jsonString", jsonString);
+        return "trend/trend7-show";
     }
 
 }

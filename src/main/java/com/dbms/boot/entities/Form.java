@@ -15,21 +15,28 @@ public class Form {
     private String maxPrice = "30000";
 //    private String minPrice = "10000";
     private String maxMileage = "50000";
-
-    //without default value
-    private String fuelType; //="gas";
-    private String numOfCylinders; // 6 cylinders
-    private String size; //full-size
-    private String region;
-    private String condition; //excellent
-    private String titleStatus; //="clean";
-    private String typeOfVehicle; //sedan
-    private String transmissionType;// = "automatic";
-    private String typeOfDrive; //4wd
-    private String color; //white
+    private String fuelType="gas";
+    private String numOfCylinders = "6 cylinders";
+    private String size = "full-size";
+    private String state = "fl";
+    private String region = "treasure coast";
+    private String condition = "excellent";
+    private String titleStatus ="clean";
+    private String typeOfVehicle = "sedan";
+    private String transmissionType = "automatic";
+    private String typeOfDrive = "4wd";
+    private String color = "white";
 
 
     public Form() {
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getMinYear() {

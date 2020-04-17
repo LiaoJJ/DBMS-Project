@@ -9,17 +9,17 @@
 <body>
 
 <nav th:replace="layouts:: navbar"></nav>
-<div th:replace="trend/trend1-form:: trend1-description"></div>
+<div th:replace="trend/trend4-form:: trend4-description"></div>
 
 <div class="container col-6">
     <canvas id="myChart1" width="50" height="50"></canvas>
 
     <script>
         var chartData = "[[${jsonString}]]"
-        var ChartType = "bar"
-        var ChartName = "Trend-1"
+        var ChartType = "line"
+        var ChartName = "Trend-4"
+        var ChartBorderDash = [5,5]
         var ChartFill = false
-        var ChartBorderDash = []
         var ChartPointStyle = ""
         var ChartShowLine = true
     </script>

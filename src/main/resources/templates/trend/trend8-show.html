@@ -9,16 +9,16 @@
 <body>
 
 <nav th:replace="layouts:: navbar"></nav>
-<div th:replace="trend/trend7-form:: trend7-description"></div>
+<div th:replace="trend/trend8-form:: trend8-description"></div>
 
 <div class="container col-6">
     <canvas id="myChart7" width="50" height="50"></canvas>
 
     <script>
         var chartData = "[[${jsonString}]]"
-        var ChartType = "bar"
-        var ChartName = "Trend-7"
-        var DataDimension = 3
+        var ChartType = "line"
+        var ChartName = "Trend-8"
+        var DataDimension = 5
     </script>
 </div>
 

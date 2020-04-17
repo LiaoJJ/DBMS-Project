@@ -1,6 +1,10 @@
 ## Database Management Project: Used Car Management System
 
 
+#### Apr 17 2:03 am
+
+- add Trend 8
+
 #### Apr 17 12:40 am
 
 - finish Trend Page 2-7 form and show

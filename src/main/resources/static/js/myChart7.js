@@ -21,12 +21,13 @@ var backgroundColor = [
  ];
 
 // plan1 label = []
-for(var i=0; i<3; i++){
+for(var i=0; i<DataDimension; i++){
     datasets[i] = {
         data: [],
         label: [],
         backgroundColor: backgroundColor[i],
-        borderColor: borderColor[i]
+        borderColor: borderColor[i],
+        fill: false,
     }
 }
 for(var i=0; i<chartJson.length; i++){
@@ -37,11 +38,18 @@ for(var i=0; i<chartJson.length; i++){
     if(chartJson[i]["label2"]) datasets[1]["label"].push(chartJson[i]["label2"]);
     datasets[2]["data"].push(chartJson[i]["data3"]);
     if(chartJson[i]["label3"]) datasets[2]["label"].push(chartJson[i]["label3"]);
+
+    if(DataDimension>3) {
+        datasets[3]["data"].push(chartJson[i]["data4"]);
+        if (chartJson[i]["label3"]) datasets[3]["label"].push(chartJson[i]["label4"]);
+        datasets[4]["data"].push(chartJson[i]["data5"]);
+        if (chartJson[i]["label3"]) datasets[4]["label"].push(chartJson[i]["label5"]);
+    }
 }
 
 var ctx = document.getElementById('myChart7').getContext('2d');
 var chart = new Chart(ctx, {
-    type: 'bar',
+    type: ChartType,
     data: {
         labels: labelData,
         datasets: datasets,
@@ -49,7 +57,7 @@ var chart = new Chart(ctx, {
     options: {
         title:{
             display:true,
-            text:"Trend7"
+            text: ChartName
         }
     }
 });

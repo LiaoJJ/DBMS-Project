@@ -8,10 +8,10 @@ import javax.persistence.Entity;
 public class Form {
 
     // with default value
-    private String minYear = "2016";
+    private String minYear = "2012";
     private String maxYear = "2020";
-    private String manufacturer = "Toyota";
-    private String model = "Corolla";
+    private String manufacturer = "ford";
+    private String model = "camry";
     private String maxPrice = "30000";
 //    private String minPrice = "10000";
     private String maxMileage = "50000";

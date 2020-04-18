@@ -194,4 +194,25 @@ public class TestController {
         return "trend/trend7-show";
     }
 
+    // 8
+    @GetMapping("/trend8/form")
+    public String trend8_form(Model model){
+        model.addAttribute("form", new Form());
+        return "trend/trend8-form";
+    }
+
+    @GetMapping("/trend8/show")
+    public String trend8_show(Model model) throws JsonProcessingException {
+        Trend7 t1 = new Trend7(2010, 11, "FL", 22, "AZ", 33, "LA", 44, "CZ", 55, "DC");
+        Trend7 t2 = new Trend7(2011, 55, "FL", 44, "AZ", 33, "LA", 22, "CZ", 11, "DC");
+        Trend7 t3 = new Trend7(2012, 43, "FL", 25, "AZ", 47, "LA", 123, "CZ", 23, "DC");
+        Trend7 t4 = new Trend7(2012, 24, "FF", 63, "RF", 14, "BF", 74, "CZ", 24, "DC");
+        Trend7 t5 = new Trend7(2013, 53, "BZ", 13, "ZB", 74, "GR", 13, "CZ", 53, "DC");
+        List<Trend7> trend1s = Arrays.asList(t1, t2, t3, t4, t5);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(trend1s);
+        model.addAttribute("jsonString", jsonString);
+        return "trend/trend8-show";
+    }
+
 }
